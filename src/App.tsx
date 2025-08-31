@@ -4,7 +4,7 @@ import { requests } from './request';
 function App() {
   return (
     <div className='App'>
-      <Row fetchURL= {requests.fetchNetflixOriginals} />
+      <Row title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals} /> {/* title プロパティが必要なようなので追加 */}
     </div>
   )
 }

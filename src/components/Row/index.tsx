@@ -1,9 +1,14 @@
-import axios from '../../axios';
+import { useProps } from "./useProps";
+import { Layout } from "./Layout";
 
-export const Row = ({fetchURL}: {fetchURL: string}) => {
-    async function fetchData() {
-        const request = await axios.get(fetchURL);
-    };
-    fetchData();
-    return <div className='Row'/>;
+type Props = {
+  title: string;
+  fetchUrl: string;
+  isLargeRow?: boolean;
+};
+
+export const Row = ({ title, fetchUrl, isLargeRow }: Props) => {
+  return (
+    <Layout title={title} movies={useProps(fetchUrl)} isLargeRow={isLargeRow} />
+  ); // {...useProps(fetchUrl)} ではなく、明示的に movies プロパティを渡す
 };
