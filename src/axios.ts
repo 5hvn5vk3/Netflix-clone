@@ -1,9 +1,8 @@
-import axios from "axios";
+import axios from 'axios'
 
-// TMDB からの baseURL リクエストを作成
+//TMDBからのbaseURLリクエストを作成
 const instance = axios.create({
-    baseURL: "https://api.themoviedb.org/3";
-});;
+  baseURL: "https://api.themoviedb.org/3",
+});
 
-export default instance
-
+export default instance;
