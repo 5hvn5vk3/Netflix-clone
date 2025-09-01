@@ -1,9 +1,12 @@
 import { Row } from './components/Row';
 import { requests } from './request';
+import { Banner } from './components/Banner';
 
 function App() {
   return (
     <div className='App'>
+      <Banner />
+
       <Row title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals} /> {/* title プロパティが必要なようなので追加 */}
       <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
       <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
