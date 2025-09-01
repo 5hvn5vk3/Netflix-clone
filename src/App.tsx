@@ -1,10 +1,13 @@
 import { Row } from './components/Row';
 import { requests } from './request';
-import { Banner } from './components/Banner';
+import { Banner } from './components/Banner'; // /index は省略できるが /Banner まで省略することはできないようだ。なぜだろう
+import { Header } from './components/Header';
 
 function App() {
   return (
     <div className='App'>
+      <Header />
+
       <Banner />
 
       <Row title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals} /> {/* title プロパティが必要なようなので追加 */}
