@@ -14,7 +14,8 @@ export const useProps = () => {
         
         
         return () => {
-            window.removeEventListener('scroll', handleShow)
+            window.removeEventListener('scroll', handleShow) // show の値が変わっても Header のスタイルが変わるだけなので、この removeEventlistner は show の変更とは無関係
+            console.log("removeEventlistener") // クリーンアップ関数作動がわかるように // Viteでのプレビューでコンソールには1回しか表示されない（Strict Mode の機能によるもの）
         };
         
        
